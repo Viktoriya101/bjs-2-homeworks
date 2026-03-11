@@ -16,17 +16,15 @@ Student.prototype.setSubject = function (subjectName) {
 Student.prototype.addMarks = function (...marksToAdd) {
   if(this.marks === undefined){
   	return;
-  } else {
-  	return this.marks.push(...marksToAdd);
   }
+  	return this.marks.push(...marksToAdd);
 }
 
 Student.prototype.getAverage = function () {
   if(this.marks === undefined || this.marks.length === 0){
   	return 0;
-  } else {
-  	return this.marks.reduce((acc, current) => acc + current, 0) / this.marks.length;
   }
+  	return this.marks.reduce((acc, current) => acc + current, 0) / this.marks.length;
 }
 
 Student.prototype.exclude = function (reason) {
